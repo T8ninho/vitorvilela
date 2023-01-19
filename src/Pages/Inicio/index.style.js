@@ -89,6 +89,7 @@ export const ContTexto = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 70%;
     h1 {
         color: #fff;
         text-align: center;
