@@ -19,9 +19,21 @@ export default function Appbar(props) {
                 </label>
             <div class="menu">
                 <ul class="list">
-                    <li><a href="/" className="link"  style={props.Inicio === true ? {color: "#000"} : {color: "#fff"}} >Início</a></li>
-                    <li><a href="galeria" className="link" style={props.Galeria === true ? {color: "#000"} : {color: "#fff"}} >Galeria</a></li>
-                    <li><a href="contatos" className="link" style={props.Contatos === true ? {color: "#000"} : {color: "#fff"}} >Contatos</a></li>
+                    <li>{props.Inicio === true ?
+                        <a href="/" className="linkActived">Início</a> :
+                        <a href="/" className="link">Início</a>
+                        }
+                    </li>
+                    <li>{props.Galeria === true ?
+                        <a href="galeria" className="linkActived">Galeria</a> :
+                        <a href="galeria" className="link">Galeria</a>
+                        }
+                    </li>
+                    <li>{props.Contatos === true ?
+                        <a href="contatos" className="linkActived">Contatos</a> :
+                        <a href="contatos" className="link">Contatos</a>
+                        }
+                    </li>
                 </ul>
             </div>
         </nav>

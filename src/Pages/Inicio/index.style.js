@@ -46,12 +46,18 @@ export const Container = styled.div`
         list-style: none;
         padding: 10px;
     }
+    .UltimosTrabContainer .subContTrab ul li img:hover {
+        box-shadow: 0   0 rgba(0,0,0,0.5);
+        backdrop-filter: blur(5px);
+    }
     .UltimosTrabContainer .subContTrab ul li img {
         width: calc(100%);
         display: block;
         border-radius: 7px;
         border-style: dotted;
         border-color: #fff;
+        transition: 
+        box-shadow 0.25s;
     }
 
     @media(max-width:600px) {

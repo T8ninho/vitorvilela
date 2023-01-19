@@ -4,6 +4,7 @@ export const Container = styled.div`
     
     font-family: "Poppins", sans-serif;
     position: fixed;
+    translate: 0;
     width: 100%;
     background: rgba(255,255,255,0.027);
     box-shadow: 0 8px 32px 0 rgba(14,19,82,037);
@@ -32,6 +33,16 @@ export const Container = styled.div`
 .logo img {
     width: 65px;
     border-radius:7px;
+    
+}
+.logo {
+    border-radius:7px;
+    transition: 
+        translate 0.25s,
+        box-shadow 0.25s;
+}
+.logo:hover {
+    translate: 0 -5px;
 }
 .list {
     list-style: none;
@@ -46,20 +57,7 @@ export const Container = styled.div`
 	display: inline-block;
     font-weight: bold;
 }
-.linkActived {
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 2px;
-	background-color: #fff;
-	border-radius: 4px;
-	scale: 0 1;
-	transform-origin: right;
-	transition: scale 0.25s;
-}
-.linkNone{}
+
 .link::before {
 	content: '';
 	position: absolute;
@@ -75,6 +73,27 @@ export const Container = styled.div`
 }
 .link:hover::before {
 	scale: 1;
+	transform-origin: left;
+}
+.linkActived {
+	position: relative;
+	display: inline-block;
+    font-weight: bold;
+}
+
+.linkActived::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	border-radius: 4px;
+	scale: 0 1;
+	transform-origin: right;
+	transition: scale 0.25s;
+    scale: 1;
 	transform-origin: left;
 }
 @media screen and (max-width: 600px) {
