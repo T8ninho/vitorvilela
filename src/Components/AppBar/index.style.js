@@ -9,6 +9,10 @@ export const Container = styled.div`
     background: rgba(255,255,255,0.027);
     box-shadow: 0 8px 32px 0 rgba(14,19,82,037);
     backdrop-filter: blur(5px);
+    translate: -5px;
+    .top {
+        position: initial;
+    }
 
     .container {
     max-width: 960px;
